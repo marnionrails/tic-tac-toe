@@ -21,7 +21,7 @@ console.log(testPlayer);
 console.log(testPlayer2);
 
 //Business Logic for Space
-function Space(square, markedBy) {
+function Space(markedBy) {
   this.square = 0;
   this.markedBy = markedBy
 }
@@ -52,7 +52,7 @@ Space.prototype.spaceMarked = function(marked) {
   return this.square;
 }
 
-let occupiedSpace = new Space();
+let occupiedSpace = new Space("Marni");
 console.log(occupiedSpace.spaceMarked(8));
 console.log(occupiedSpace)
 

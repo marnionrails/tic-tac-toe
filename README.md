@@ -31,11 +31,20 @@ Two users play the game of tic-tac-toe.
 ## Tests
 
 Test 1: Describe: player.mark()
-Test: "It will return x, y or invalid choice, depending on users' choice"
+Test: "It will return x, o or invalid choice, depending on users' choice"
 Expect("X").toEqual("X");
 Expect("O").toEqual("O");
 Expect([anything else]).Equal("Invalid Choice");
 
+Test2: Describe: space.mark()
+Test: "It will return the 1-9, depending on the space the player marks."
+Expect(space.markedBy(1).toEqual("1"));
+Expect(space.markedBy(6).toEqual("6"));
+Expect(space.markedBy(10).toEqual("Not a square"));
+
+Test3: Describe: space.markedBy()
+Test: "It will return the player object."
+Expect(space.markedBy("Marni").toEqual("Marni"));
 
 ## Setup/Installation Requirements
 
